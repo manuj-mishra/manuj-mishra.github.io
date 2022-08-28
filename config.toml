@@ -1,0 +1,4 @@
+baseURL = 'https://manuj-mishra.github.io'
+languageCode = 'en-us'
+title = 'Manuj Mishra'
+theme = 'henry'

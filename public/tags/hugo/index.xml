@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+
+        <title>Manuj Mishra - hugo</title>
+        <link>https://manuj-mishra.github.io/tags/hugo/</link>
+        <description>Recent content - Manuj Mishra - hugo</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        
+        
+        
+        
+        <lastBuildDate>Sun, 17 Oct 2021 00:00:00 UTC</lastBuildDate>
+        <atom:link href="https://manuj-mishra.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    </channel>
+</rss>
