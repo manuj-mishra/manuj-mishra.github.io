@@ -19,12 +19,13 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04 MST"
   # description = ""
-  # images = [""]
+  bgImg = "img/background.jpg"
+  # images = []
 
-  themeColor = "#494f5c"
+  themeColor = "#eb4034"
   customCSS = ["css/custom.css"]
 
-  homeTitle = "Hi! I'm Manuj "
+  homeTitle = "Hi 👋 I'm Manuj"
   # footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # bgImg = ""  # Homepage background-image URL
 
@@ -59,7 +60,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     url = "blog/"
     weight = 1
   
-  [[menu.main]]
-    name = "About"
-    url = "about/"
-    weight = 2
+  # [[menu.main]]
+  #   name = "About"
+  #   url = "about/"
+  #   weight = 2

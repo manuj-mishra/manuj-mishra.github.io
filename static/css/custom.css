@@ -1,3 +1,17 @@
+.bg-img {
+  width: 100vw;
+  height: 100vh;
+  opacity: .3;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: opacity .5s;
+}
+
 #home-subtitle {
   margin-top: .5em;
   margin-bottom: 1.5em;
@@ -6,6 +20,5 @@
   font-size: .75em;
   font-style:normal;
   opacity: .9;
-  inline-size: 38em;
   overflow-wrap: break-word;
-}   
+} 
