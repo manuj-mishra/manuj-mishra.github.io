@@ -4,7 +4,7 @@ date: 2021-07-10
 draft: false
 description: "An app to help students sustain good mental health"
 comments: false
-tags: ['design', 'project', 'entrepreneurship', 'social enterprise']
+tags: ['design', 'project', 'entrepreneurship', 'social enterprise', 'machine learning']
 ---
 
 **TLDR:** To build something people want: (1) understand your users, (2) iterate fast, and (3) tell a good story.
