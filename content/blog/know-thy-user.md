@@ -1,7 +1,7 @@
 ---
 title: "Project: Wave Wellbeing"
 date: 2021-07-10
-draft: true
+draft: false
 description: "An app to help students sustain good mental health"
 comments: false
 tags: ['design', 'project']
