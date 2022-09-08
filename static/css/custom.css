@@ -1,0 +1,11 @@
+#home-subtitle {
+  margin-top: .5em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  line-height: normal;
+  font-size: .75em;
+  font-style:normal;
+  opacity: .9;
+  inline-size: 38em;
+  overflow-wrap: break-word;
+}   
