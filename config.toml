@@ -18,14 +18,14 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   dateformShort   = "02 Jan"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04 MST"
-  # description = ""
+  description = "Manuj Mishra's Blog"
   bgImg = "img/background.jpg"
   # images = []
 
-  themeColor = "#eb4034"
+  # themeColor = "#eb4034"
   customCSS = ["css/custom.css"]
 
-  homeTitle = "Hi 👋 I'm Manuj"
+  homeTitle = "Hi, I'm Manuj"
   # footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # bgImg = ""  # Homepage background-image URL
 
