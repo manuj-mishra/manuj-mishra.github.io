@@ -1,26 +1,26 @@
 ---
 title: "Building ML pipelines using Dagster"
 date: 2022-09-09
-draft: true
+draft: false
 description: "Using workflow orchestration to streamline pipeline development"
 comments: false
 tags: ['project', 'machine learning']
 ---
 
-Suppose we are in the business of building machine learning pipelines. We extract insights from raw data using ML models and present these in a format that is valuable to an end user. There are many parts of this pipeline that could change over time and we would like to handle these changes effectively. What changes are we talking about here? I see 3 main parts.
+Suppose we are in the business of building machine learning pipelines. We extract insights from raw data using ML models and present these in a format that is valuable to an end user. There are many parts of this pipeline that could change over time, and we would like to handle these changes effectively. What changes are we talking about here? I see 3 main parts.
 
 **1. Input data (aka test data)**: How does the volume of input data vary over time? Is it received as a stream or in batches? [Does the distribution of this data remain stable?]({{< relref "data-drift">}})
 
-**2. Models**: As more accurate models are developed, we will want to switch out the specific models being used at each stage. How can we make the pipeline model-agnostic? How do we load models efficently?
+**2. Models**: As more accurate models are developed, we will want to switch out the specific models being used at each stage. How can we make the pipeline model-agnostic? How do we load models efficiently?
 
 **3. Output data**: As well as results, we want to output metrics, errors, metadata, etc. Where will these be stored? How will they be formatted?
 
 
 ## Solution
 
-Enter Dagster. Dagster is a workflow orchestration tool which makes it easier to build, test, and debug pipelines. It also has features to schedule and track runs. Here an overview of how it works.
+Enter Dagster. Dagster is a workflow orchestration tool which makes it easier to build, test, and debug pipelines. It also has features to schedule and track runs. Here is an overview of how it works.
 
-A ML pipeline can be thought of as a set of operations. Some must happen sequentially and others can happen in parallel. These operations can be represented in a directed acyclic graph (![DAG](https://medium.com/hashmapinc/building-ml-pipelines-8e27344a42d2)).
+An ML pipeline can be thought of as a set of operations. Some must happen sequentially and others can happen in parallel. These operations can be represented in a directed acyclic graph (![DAG](https://medium.com/hashmapinc/building-ml-pipelines-8e27344a42d2)).
 
 Dagster has a number of classes which help implement ML pipelines as DAGs.
 - Op: A function representing a node in the DAG
@@ -31,7 +31,7 @@ Dagster has a number of classes which help implement ML pipelines as DAGs.
 
 ### 1. Changing input data
 
-To get the right input data, dagster implements schedules and sensors. Schedules trigger pipeline runs at specific intervals. For example, we may want to process data about all trades made on a financial instrument at the end of each working day. Sensors trigger runs based on changes in external state. For example we may want to process data every time a user registers on our website. Sensors also have a cursor property to cache data about the last piece of processed data. This allows them to trigger runs based on any **new** data in a persistant store by only processing data uploaded after the time stored in the cursor.
+To get the right input data, dagster implements schedules and sensors. Schedules trigger pipeline runs at specific intervals. For example, we may want to process data about all trades made on a financial instrument at the end of each working day. Sensors trigger runs based on changes in external state. For example, we may want to process data every time a user registers on our website. Sensors also have a cursor property to cache data about the last piece of processed data. This allows them to trigger runs based on any **new** data in a persistent store by only processing data uploaded after the time stored in the cursor.
 
 By extending Dagster types, we can do data validation in the channels between ops. For example, if we are passing data around in Pandas dataframes, we can make use of the [dagster-pandas](https://docs.dagster.io/integrations/pandas) library. Dagster has many such [integrations](https://docs.dagster.io/integrations).
 
@@ -41,7 +41,7 @@ Resources are a great tool to deal with changing models. To test our pipeline in
 ### 3. Changing output data
 For some background context, dagster caches artifacts in between ops which makes it easy to rerun a failed job from the point of failure. This speeds up development massively. The artifact store is managed by the IO manager and IO managers can be overridden. By writing new IO managers to interface with other data stores or registries like MLFlow, we can read input data and models as well as write outputs, metrics, and metadata to the most appropriate location.
 
-During operations, Dagster can emit various events. Failure events cancel the current job if specified conditions are met and allow error messages to be customised. Asset observations keep track of metadata as assets move through the pipeline. The Dagit UI provides great visualisations for both of these but I've found accessing event store data directly to be clunky in the version of Dagster I've been using (1.0.8).
+During operations, Dagster can emit various events. Failure events cancel the current job if specified conditions are met and allow error messages to be customised. Asset observations keep track of metadata as assets move through the pipeline. The Dagit UI provides great visualisations for both of these, but I've found accessing event store data directly to be clunky in the version of Dagster I've been using (1.0.8).
 
 ![Dagit UI showing a run](/img/dagster/dagit-run.png "Dagit UI showing a run[2]")
 
