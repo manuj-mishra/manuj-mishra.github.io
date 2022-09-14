@@ -4,10 +4,8 @@ date: 2021-07-10
 draft: false
 description: "An app to help students sustain good mental health"
 comments: false
-tags: ['design', 'project', 'entrepreneurship', 'social enterprise', 'machine learning']
+tags: ['design', 'project', 'entrepreneurship', 'social enterprise']
 ---
-
-**TLDR:** To build something people want: (1) understand your users, (2) iterate fast, and (3) tell a good story.
 
 >   1 in 3 students at Imperial College London face mental health problems. Almost half will never reach out for help.
 
@@ -42,4 +40,6 @@ Whenever you pitch your product to someone, remember that you’re trying to mak
 
 Immerse your audience in the user’s perspective. Enable them to feel both the conflict and resolution. Humans are built to be receptive to stories — so make sure your story is a good one.
 
-**Next steps:** We are looking to move this project forward in the coming months so follow this Medium page for more updates. If you are someone working in the mental health or wellbeing space, we’d love to hear from you! — Please reach out to me on LinkedIn [here](https://www.linkedin.com/in/manuj-mishra)
+**TLDR:** To build something people want: (1) understand your users, (2) iterate fast, and (3) tell a good story.
+
+**Next steps:** If you are someone working in the mental health or wellbeing space, I’d love to hear from you! — Please reach out to me on LinkedIn [here](https://www.linkedin.com/in/manuj-mishra)

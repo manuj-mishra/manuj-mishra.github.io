@@ -1,0 +1,5 @@
+/* Makes description section on landing page smaller */
+.first-entry {
+    min-height: 0;
+}
+

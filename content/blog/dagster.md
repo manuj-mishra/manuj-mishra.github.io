@@ -4,7 +4,7 @@ date: 2022-09-09
 draft: false
 description: "Using workflow orchestration to streamline pipeline development"
 comments: false
-tags: ['project', 'machine learning']
+tags: ['machine learning']
 ---
 
 Suppose we are in the business of building machine learning pipelines. We extract insights from raw data using ML models and present these in a format that is valuable to an end user. There are many parts of this pipeline that could change over time, and we would like to handle these changes effectively. What changes are we talking about here? I see 3 main parts.

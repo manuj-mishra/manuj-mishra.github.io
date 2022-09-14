@@ -5,7 +5,7 @@ draft: false
 math: true
 description: "Using principal component analysis autoencoders to track changes in input data distribution"
 comments: false
-tags: ['project', 'machine learning']
+tags: ['machine learning']
 ---
 
 Machine learning models are built on the assumption that training data is sufficiently representative of test data. However, for many use cases, the distribution of test data may change over time to the extent that this assumption no longer holds. This is called input data drift. Detecting input data drift is a crucial first step towards mitigating its effects, and we can make use of autoencoder-style architectures to do this. In this post I'll discuss a PCA-based method.
