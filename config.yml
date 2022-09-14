@@ -45,7 +45,7 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Content: Hi, Manuj here! This is a log of my learnings during my degree, internships, and side projects. I'm currently studying an MSc in Computer Science at the University of Oxford.
+    Content: Hi, Manuj here! This is a log of my learnings during my degree, internships, and side projects. I'm currently studying an MSc in Advanced Computer Science at the University of Oxford.
 
   socialIcons:
     - name: github
